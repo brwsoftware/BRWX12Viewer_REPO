@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<HBox xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane gridLinesVisible="true" HBox.hgrow="ALWAYS">
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         </rowConstraints>
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="95.0" minWidth="10.0" prefWidth="62.0" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="433.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="318.0" minWidth="10.0" prefWidth="26.0" />
+         </columnConstraints>
+         <children>
+            <Label text="TSID:">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+            </Label>
+            <Label text="Impl:" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+            </Label>
+            <Label text="Schema:" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+            </Label>
+            <Label text="Xslt:" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <TextField id="tsid" fx:id="txtTSID" GridPane.columnIndex="1" />
+            <TextField id="impl" fx:id="txtImpl" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField id="schema" fx:id="txtSchema" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField id="xslt" fx:id="txtXslt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#onBrowseSchema" text="..." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#onBrowseXslt" text="..." GridPane.columnIndex="2" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</HBox>

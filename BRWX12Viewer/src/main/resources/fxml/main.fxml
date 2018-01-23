@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="468.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+	<top>
+		<MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+			<menus>
+				<Menu onShowing="#onFileMenuShowing" text="_File">
+					<items>
+						<MenuItem onAction="#onFileOpen" text="_Open">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+						<MenuItem onAction="#onFileNewTab" text="Open _New Tab">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+						<MenuItem onAction="#onFileSaveAs" text="_Save As" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem onAction="#onFilePrint" text="_Print">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+						<SeparatorMenuItem id="mruStart" mnemonicParsing="false" />
+						<MenuItem id="mruEnd" onAction="#onFileExit" text="_Exit" />
+					</items>
+				</Menu>
+				<Menu text="_Edit">
+					<items>
+						<MenuItem onAction="#onEditCopy" text="_Copy">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+						<MenuItem onAction="#onEditFind" text="_Find">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+						<MenuItem onAction="#onEditSelectAll" text="Select _All">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem onAction="#onEditConfiguration" text="_Configuration" />
+					</items>
+				</Menu>
+				<Menu text="_Help">
+					<items>
+						<MenuItem onAction="#onHelpAbout" text="_About" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<center>
+		<TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/tabpane.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER" />
+	</center>
+</BorderPane>

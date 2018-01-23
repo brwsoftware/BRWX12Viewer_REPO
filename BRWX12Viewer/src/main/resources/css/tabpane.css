@@ -1,0 +1,6 @@
+.tab-close-button:hover {
+	-fx-background-color: #FF0000;
+}
+.tab:selected .tab-label {
+    -fx-font-weight: bold;
+}
